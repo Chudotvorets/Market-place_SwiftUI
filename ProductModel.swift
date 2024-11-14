@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct Product: Identifiable, Codable, Hashable {
+    var id: Int
+    var title: String
+    var price: Double
+    var description: String
+    var image: String
+    
+    var imageURL: URL? {
+        URL(string: image)
+    }
+}

@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct ProductListView: View {
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                
+            }
+        }
+    }
+}
