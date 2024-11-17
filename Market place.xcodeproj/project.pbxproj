@@ -11,6 +11,9 @@
 		57302C232CE6299F0033923B /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C222CE6299F0033923B /* ProductModel.swift */; };
 		57302C252CE629C50033923B /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C242CE629C50033923B /* ProductViewModel.swift */; };
 		57302C272CE62A170033923B /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C262CE62A170033923B /* ProductService.swift */; };
+		57302C362CE738ED0033923B /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C352CE738ED0033923B /* ProductDetailView.swift */; };
+		57302C462CE9D4580033923B /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 57302C452CE9D4580033923B /* CombineMoya */; };
+		57302C482CE9D4580033923B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 57302C472CE9D4580033923B /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,7 @@
 		57302C222CE6299F0033923B /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		57302C242CE629C50033923B /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		57302C262CE62A170033923B /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		57302C352CE738ED0033923B /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -63,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57302C482CE9D4580033923B /* Moya in Frameworks */,
+				57302C462CE9D4580033923B /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +92,7 @@
 		57302BEA2CE6287B0033923B = {
 			isa = PBXGroup;
 			children = (
+				57302C352CE738ED0033923B /* ProductDetailView.swift */,
 				57302C262CE62A170033923B /* ProductService.swift */,
 				57302C242CE629C50033923B /* ProductViewModel.swift */,
 				57302C202CE6294C0033923B /* ProductListView.swift */,
@@ -127,6 +134,8 @@
 			);
 			name = "Market place";
 			packageProductDependencies = (
+				57302C452CE9D4580033923B /* CombineMoya */,
+				57302C472CE9D4580033923B /* Moya */,
 			);
 			productName = "Market place";
 			productReference = 57302BF32CE6287B0033923B /* Market place.app */;
@@ -210,6 +219,9 @@
 			);
 			mainGroup = 57302BEA2CE6287B0033923B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				57302C442CE9D4580033923B /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 57302BF42CE6287B0033923B /* Products */;
 			projectDirPath = "";
@@ -252,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57302C212CE6294C0033923B /* ProductListView.swift in Sources */,
+				57302C362CE738ED0033923B /* ProductDetailView.swift in Sources */,
 				57302C232CE6299F0033923B /* ProductModel.swift in Sources */,
 				57302C252CE629C50033923B /* ProductViewModel.swift in Sources */,
 				57302C272CE62A170033923B /* ProductService.swift in Sources */,
@@ -571,6 +584,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		57302C442CE9D4580033923B /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		57302C452CE9D4580033923B /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57302C442CE9D4580033923B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		57302C472CE9D4580033923B /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57302C442CE9D4580033923B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 57302BEB2CE6287B0033923B /* Project object */;
 }
