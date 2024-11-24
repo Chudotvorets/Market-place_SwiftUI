@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		572E9CF12CECDDAB00DC1813 /* ProductCaregory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9CF02CECDDAB00DC1813 /* ProductCaregory.swift */; };
+		572E9D592CEF51E800DC1813 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 572E9D582CEF51E800DC1813 /* SDWebImageSwiftUI */; };
+		572E9D6A2CF1BE9A00DC1813 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9D692CF1BE9A00DC1813 /* ProductCardView.swift */; };
+		572E9D6C2CF1C2A600DC1813 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9D6B2CF1C2A600DC1813 /* SearchBar.swift */; };
 		57302C212CE6294C0033923B /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C202CE6294C0033923B /* ProductListView.swift */; };
 		57302C232CE6299F0033923B /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C222CE6299F0033923B /* ProductModel.swift */; };
 		57302C252CE629C50033923B /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C242CE629C50033923B /* ProductViewModel.swift */; };
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		572E9CF02CECDDAB00DC1813 /* ProductCaregory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCaregory.swift; sourceTree = "<group>"; };
+		572E9D692CF1BE9A00DC1813 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		572E9D6B2CF1C2A600DC1813 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		57302BF32CE6287B0033923B /* Market place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Market place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57302C032CE6287D0033923B /* Market placeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Market placeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57302C0D2CE6287D0033923B /* Market placeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Market placeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572E9D592CEF51E800DC1813 /* SDWebImageSwiftUI in Frameworks */,
 				57302C482CE9D4580033923B /* Moya in Frameworks */,
 				57302C462CE9D4580033923B /* CombineMoya in Frameworks */,
 			);
@@ -92,11 +100,14 @@
 		57302BEA2CE6287B0033923B = {
 			isa = PBXGroup;
 			children = (
+				572E9D692CF1BE9A00DC1813 /* ProductCardView.swift */,
+				572E9CF02CECDDAB00DC1813 /* ProductCaregory.swift */,
 				57302C352CE738ED0033923B /* ProductDetailView.swift */,
 				57302C262CE62A170033923B /* ProductService.swift */,
 				57302C242CE629C50033923B /* ProductViewModel.swift */,
 				57302C202CE6294C0033923B /* ProductListView.swift */,
 				57302C222CE6299F0033923B /* ProductModel.swift */,
+				572E9D6B2CF1C2A600DC1813 /* SearchBar.swift */,
 				57302BF52CE6287B0033923B /* Market place */,
 				57302C062CE6287D0033923B /* Market placeTests */,
 				57302C102CE6287D0033923B /* Market placeUITests */,
@@ -136,6 +147,7 @@
 			packageProductDependencies = (
 				57302C452CE9D4580033923B /* CombineMoya */,
 				57302C472CE9D4580033923B /* Moya */,
+				572E9D582CEF51E800DC1813 /* SDWebImageSwiftUI */,
 			);
 			productName = "Market place";
 			productReference = 57302BF32CE6287B0033923B /* Market place.app */;
@@ -221,6 +233,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				57302C442CE9D4580033923B /* XCRemoteSwiftPackageReference "Moya" */,
+				572E9D482CEF4F5000DC1813 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 57302BF42CE6287B0033923B /* Products */;
@@ -266,6 +279,9 @@
 				57302C212CE6294C0033923B /* ProductListView.swift in Sources */,
 				57302C362CE738ED0033923B /* ProductDetailView.swift in Sources */,
 				57302C232CE6299F0033923B /* ProductModel.swift in Sources */,
+				572E9CF12CECDDAB00DC1813 /* ProductCaregory.swift in Sources */,
+				572E9D6A2CF1BE9A00DC1813 /* ProductCardView.swift in Sources */,
+				572E9D6C2CF1C2A600DC1813 /* SearchBar.swift in Sources */,
 				57302C252CE629C50033923B /* ProductViewModel.swift in Sources */,
 				57302C272CE62A170033923B /* ProductService.swift in Sources */,
 			);
@@ -586,6 +602,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		572E9D482CEF4F5000DC1813 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
 		57302C442CE9D4580033923B /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -597,6 +621,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		572E9D582CEF51E800DC1813 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 572E9D482CEF4F5000DC1813 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		57302C452CE9D4580033923B /* CombineMoya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 57302C442CE9D4580033923B /* XCRemoteSwiftPackageReference "Moya" */;
