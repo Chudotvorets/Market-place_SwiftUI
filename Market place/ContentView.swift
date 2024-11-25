@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var viewProductModel = ProductViewModel(favoritesService: FavoritesService())
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            ProductListView()
+                .environmentObject(viewProductModel)
+                .tabItem {
+                    Label("",systemImage: "list.bullet")
+                }
         }
-        .padding()
     }
 }
 

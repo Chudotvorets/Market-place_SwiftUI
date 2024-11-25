@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum ProductService {
-    case fetchProductsByCategory
+    case fetchProductsByCategory(category: ProductCategory)
 }
 
 extension ProductService: TargetType {
@@ -18,7 +18,11 @@ extension ProductService: TargetType {
         return URL(string: "https://fakestoreapi.com/products")!
     }
     var path: String {
-        return ""
+        switch self {
+        case .fetchProductsByCategory(category: let category):
+            let path = category.path
+            return path
+        }
     }
     
     var method: Moya.Method {
