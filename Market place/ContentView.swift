@@ -18,6 +18,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("",systemImage: "list.bullet")
                 }
+            FavoritesView()
+                .environmentObject(viewProductModel)
+                .tabItem {
+                    Label("Favorites",systemImage: "list.star")
+                }
         }
     }
 }

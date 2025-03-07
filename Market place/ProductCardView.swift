@@ -14,24 +14,22 @@ struct ProductCardView: View {
     @EnvironmentObject var viewModel: ProductViewModel
     
     var body: some View {
-        HStack {
+        VStack {
             KFImage(product.imageURL)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 80, height: 80)
-                .cornerRadius(8)
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: 200)
+                //.cornerRadius(8)
             
-            VStack(alignment: .leading) {
+            Text(String(format: "$%.2f", product.price))
+                .font(.custom("AvenirNext-bold", size: 20))
+                .foregroundColor(.red)
+            
+            HStack {
                 Text(product.title)
                     .font(.headline)
                     .lineLimit(2)
-                
-                Text(String(format: "$%.2f", product.price))
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
             }
-            
-            Spacer()
             
             Button(action: {
                 viewModel.toggleFavorite(for: product)
@@ -46,3 +44,4 @@ struct ProductCardView: View {
         .shadow(radius: 4)
     }
 }
+
