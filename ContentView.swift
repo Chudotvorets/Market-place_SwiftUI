@@ -22,7 +22,7 @@ struct ContentView: View {
                 .environmentObject(viewProductModel)
                 .tabItem {
                     Label("Favorites",systemImage: "list.star")
-                }
+            }
         }
     }
 }
