@@ -6,7 +6,7 @@
 //
 
 import Testing
-@testable import Market_place
+@testable import MarketPlace
 
 struct Market_placeTests {
 

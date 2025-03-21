@@ -11,15 +11,18 @@ import Combine
 import CombineMoya
 import SwiftUI
 
+@MainActor
 class ProductViewModel: ObservableObject {
+    
     @Published var products: [Product] = []
     @Published var searchQuery: String = ""
     @Published var isLoading: Bool = false
     @Published var currentIndex = 0
     
+    //private let provider = MoyaProvider<ProductService>()
+    private let productService = APIServices()
     private let favoritesService: FavoritesService
     private var cancellables = Set<AnyCancellable>()
-    private let provider = MoyaProvider<ProductService>()
     private var carouselTimer: AnyCancellable?
     
     init(favoritesService: FavoritesService) {
@@ -30,7 +33,7 @@ class ProductViewModel: ObservableObject {
     }
     
 //    func handleDragGesture(_ gesture: DragGesture.Value, screenWidth: CGFloat) {
-//            let dragThreshold: CGFloat = screenWidth / 2
+//            let dragThreshold: CGFloat =/Users/work2/Desktop/WorkProject/Market place/Market place/API/ProductAPiService.swift screenWidth / 2
 //            if gesture.translation.width < -dragThreshold {
 //                currentIndex = min(currentIndex + 1, products.count - 1)
 //            } else if gesture.translation.width > dragThreshold {
@@ -46,7 +49,7 @@ class ProductViewModel: ObservableObject {
                    self.currentIndex = (self.currentIndex + 1) % self.products.count
                }
                .store(in: &cancellables)
-       }
+        }
     
     func stopAutoScroll() {
             cancellables.removeAll()
@@ -84,19 +87,21 @@ class ProductViewModel: ObservableObject {
         }
     
     func fetchProducts() {
-        provider.requestPublisher(.fetchProductsByCategory(category: ProductCategory.all))
-            .map(\.data)
-            .decode(type: [Product].self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
-                self.isLoading = false
-                if case .failure(let error) = completion {
-                    print("Error fetching products: \(error.localizedDescription)")
-                }
-            }, receiveValue: { products in
-                self.products = products
-            })
-            .store(in: &cancellables)
+  
+        productService.fetchProducts(from: .all) { (result) in
+            
+                switch result {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        //self.isLoading = true
+                        self.products = response
+                        print("init response")
+                    }
+                case .failure(let error):
+                    print(error)
+                
+            }
+        }
     }
     
     func startCarouselTimer() {

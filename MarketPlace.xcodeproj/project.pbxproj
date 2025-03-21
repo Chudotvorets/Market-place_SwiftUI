@@ -8,18 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		571F20F72CF3519600DC02E6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 571F20F62CF3519600DC02E6 /* Kingfisher */; };
-		571F21172CF4A9BC00DC02E6 /* FavoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571F21162CF4A9BC00DC02E6 /* FavoriesService.swift */; };
-		572E9CF12CECDDAB00DC1813 /* ProductCaregory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9CF02CECDDAB00DC1813 /* ProductCaregory.swift */; };
 		572E9D592CEF51E800DC1813 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 572E9D582CEF51E800DC1813 /* SDWebImageSwiftUI */; };
-		572E9D6A2CF1BE9A00DC1813 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9D692CF1BE9A00DC1813 /* ProductCardView.swift */; };
-		572E9D6C2CF1C2A600DC1813 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E9D6B2CF1C2A600DC1813 /* SearchBar.swift */; };
-		57302C212CE6294C0033923B /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C202CE6294C0033923B /* ProductListView.swift */; };
-		57302C232CE6299F0033923B /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C222CE6299F0033923B /* ProductModel.swift */; };
-		57302C252CE629C50033923B /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C242CE629C50033923B /* ProductViewModel.swift */; };
-		57302C272CE62A170033923B /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C262CE62A170033923B /* ProductService.swift */; };
-		57302C362CE738ED0033923B /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57302C352CE738ED0033923B /* ProductDetailView.swift */; };
 		57302C462CE9D4580033923B /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 57302C452CE9D4580033923B /* CombineMoya */; };
 		57302C482CE9D4580033923B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 57302C472CE9D4580033923B /* Moya */; };
+		57D84DE12D7B3FF5001607E5 /* Market_placeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D84DDD2D7B3FF5001607E5 /* Market_placeApp.swift */; };
+		57D84E1A2D7B60B0001607E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D84E122D7B60B0001607E5 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,26 +33,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		571F21162CF4A9BC00DC02E6 /* FavoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriesService.swift; sourceTree = "<group>"; };
-		572E9CF02CECDDAB00DC1813 /* ProductCaregory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCaregory.swift; sourceTree = "<group>"; };
-		572E9D692CF1BE9A00DC1813 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
-		572E9D6B2CF1C2A600DC1813 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		57302BF32CE6287B0033923B /* MarketPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57302C032CE6287D0033923B /* MarketPlaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketPlaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57302C0D2CE6287D0033923B /* MarketPlaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketPlaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		57302C202CE6294C0033923B /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
-		57302C222CE6299F0033923B /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
-		57302C242CE629C50033923B /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
-		57302C262CE62A170033923B /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
-		57302C352CE738ED0033923B /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		57D84DDD2D7B3FF5001607E5 /* Market_placeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market_placeApp.swift; sourceTree = "<group>"; };
+		57D84E122D7B60B0001607E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		57302BF52CE6287B0033923B /* Market place */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Market place";
-			sourceTree = "<group>";
-		};
 		57302C062CE6287D0033923B /* Market placeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Market placeTests";
@@ -68,6 +49,16 @@
 		57302C102CE6287D0033923B /* Market placeUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Market placeUITests";
+			sourceTree = "<group>";
+		};
+		57D84DEA2D7B6066001607E5 /* Preview Content */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		57D84E132D7B60B0001607E5 /* Market place */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Market place";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -104,16 +95,10 @@
 		57302BEA2CE6287B0033923B = {
 			isa = PBXGroup;
 			children = (
-				571F21162CF4A9BC00DC02E6 /* FavoriesService.swift */,
-				572E9D692CF1BE9A00DC1813 /* ProductCardView.swift */,
-				572E9CF02CECDDAB00DC1813 /* ProductCaregory.swift */,
-				57302C352CE738ED0033923B /* ProductDetailView.swift */,
-				57302C262CE62A170033923B /* ProductService.swift */,
-				57302C242CE629C50033923B /* ProductViewModel.swift */,
-				57302C202CE6294C0033923B /* ProductListView.swift */,
-				57302C222CE6299F0033923B /* ProductModel.swift */,
-				572E9D6B2CF1C2A600DC1813 /* SearchBar.swift */,
-				57302BF52CE6287B0033923B /* Market place */,
+				57D84DDD2D7B3FF5001607E5 /* Market_placeApp.swift */,
+				57D84E122D7B60B0001607E5 /* ContentView.swift */,
+				57D84E132D7B60B0001607E5 /* Market place */,
+				57D84DEA2D7B6066001607E5 /* Preview Content */,
 				57302C062CE6287D0033923B /* Market placeTests */,
 				57302C102CE6287D0033923B /* Market placeUITests */,
 				57302BF42CE6287B0033923B /* Products */,
@@ -146,7 +131,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				57302BF52CE6287B0033923B /* Market place */,
+				57D84DEA2D7B6066001607E5 /* Preview Content */,
+				57D84E132D7B60B0001607E5 /* Market place */,
 			);
 			name = MarketPlace;
 			packageProductDependencies = (
@@ -283,15 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				571F21172CF4A9BC00DC02E6 /* FavoriesService.swift in Sources */,
-				57302C212CE6294C0033923B /* ProductListView.swift in Sources */,
-				57302C362CE738ED0033923B /* ProductDetailView.swift in Sources */,
-				57302C232CE6299F0033923B /* ProductModel.swift in Sources */,
-				572E9CF12CECDDAB00DC1813 /* ProductCaregory.swift in Sources */,
-				572E9D6A2CF1BE9A00DC1813 /* ProductCardView.swift in Sources */,
-				572E9D6C2CF1C2A600DC1813 /* SearchBar.swift in Sources */,
-				57302C252CE629C50033923B /* ProductViewModel.swift in Sources */,
-				57302C272CE62A170033923B /* ProductService.swift in Sources */,
+				57D84DE12D7B3FF5001607E5 /* Market_placeApp.swift in Sources */,
+				57D84E1A2D7B60B0001607E5 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +430,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Market place/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -479,7 +457,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Market place/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -497,6 +474,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Release;
 		};

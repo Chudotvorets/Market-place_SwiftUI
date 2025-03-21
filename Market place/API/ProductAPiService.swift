@@ -8,36 +8,47 @@
 import Foundation
 import Moya
 
-@MainActor
-class APIService: ObservableObject {
-    private let provider = MoyaProvider<ProductService>()
+protocol APIServicesProtocol {
+    func fetchProducts(from endpoint: ProductCategory, completion: @escaping (Result<[Product], APICallError>) -> ())
+    func fetchUser(completion: @escaping (Result<UserAPIResults, APICallError>) -> ())
+}
+
+class APIServices: APIServicesProtocol {
     
-    func fetchProductsByCategory(category: ProductCategory) async throws -> String {
-        return try await withCheckedThrowingContinuation { continuation in
-            provider.request(.fetchProductsByCategory(category: category)) { result in
+    
+    
+    private let provider = MoyaProvider<ProductService>()
+        
+        func fetchProducts(from endpoint: ProductCategory, completion: @escaping (Result<[Product], APICallError>) -> ()) {
+            provider.request(.fetchProductsByCategory(category: endpoint)) { result in
                 switch result {
                 case .success(let response):
-                    let responseString = String(data: response.data, encoding: .utf8) ?? "Failed to parse"
-                    continuation.resume(returning: responseString)
+                    do {
+                        let products = try JSONDecoder().decode([Product].self, from: response.data)
+                        completion(.success(products))
+                    } catch {
+                        completion(.failure(.decodingError))
+                    }
                 case .failure(let error):
-                    let apiError = handleMoyaError(error)
-                    continuation.resume(throwing: apiError)
+                    completion(.failure(handleMoyaError(error)))
                 }
             }
         }
-    }
-    
-    func fetchUser() async throws -> String {
-        return try await withCheckedThrowingContinuation { continuation in
+        
+        
+        func fetchUser(completion: @escaping (Result<UserAPIResults, APICallError>) -> ()) {
             provider.request(.fetchUser) { result in
                 switch result {
                 case .success(let response):
-                    let responseString = String(data: response.data, encoding: .utf8) ?? "Failed to parse"
-                    continuation.resume(returning: responseString)
+                    do {
+                        let user = try JSONDecoder().decode(UserAPIResults.self, from: response.data)
+                        completion(.success(user))
+                    } catch {
+                        completion(.failure(.decodingError))
+                    }
                 case .failure(let error):
-                    let apiError = handleMoyaError(error)
-                    continuation.resume(throwing: apiError)
-                }
+                    completion(.failure(handleMoyaError(error)))
+                
             }
         }
     }
