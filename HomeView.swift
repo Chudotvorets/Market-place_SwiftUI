@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Kingfisher
 
-struct ProductListView: View {
+struct HomeView: View {
     
     @EnvironmentObject var viewModel: ProductViewModel
     @GestureState private var dragOffset: CGFloat = 0

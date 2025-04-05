@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     
     @StateObject private var viewProductModel = ProductViewModel(favoritesService: FavoritesService())
     
     var body: some View {
         TabView {
-            ProductListView()
+            HomeView()
                 .environmentObject(viewProductModel)
                 .tabItem {
                     Label("",systemImage: "list.bullet")
@@ -24,10 +24,11 @@ struct ContentView: View {
                     Label("Favorites",systemImage: "list.star")
             }
             
+            
         }
     }
 }
 
 #Preview {
-    ContentView()
+    MainView()
 }
